@@ -12,6 +12,11 @@
   <h1>Lightning Out</h1>
   <script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
   <script>
+		function callback1(cmp1) {
+		  console.log("function called");
+		  alert(cmp1);
+		  // do some stuff
+		}
        $Lightning.use("c:LoutTest", function() {
          console.log("App embeded")
            $Lightning.createComponent("c:EclaimsTest",
@@ -25,12 +30,7 @@
           },
          "https://myeurolife--qa.lightning.force.com",
          "00D0E000000AUdf!AQgAQKtHomR8e3yQ9BHmo7gp9zj6QfYe1x.hbteiCyELteSHcCGp0bE3s0r0nKAl8g3.livUZfMk0tQ12nrHy27Gpz.A0IJK",
-        )
-		function callback1(cmp1) {
-		  console.log("function called");
-		  alert(cmp1);
-		  // do some stuff
-		}		
+        )		
   </script>
 </div>
 
