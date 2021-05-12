@@ -12,15 +12,11 @@
   <h1>Lightning Out</h1>
   <script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
   <script>
-		function callback1(cmp1) {
-		  console.log("function called");
-		  alert(cmp1);
-		  // do some stuff
-		}
        $Lightning.use("c:LoutTest", function() {
          console.log("App embeded")
            $Lightning.createComponent("c:EclaimsTest",
-                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.2QZCqB8Ed4_8EHBNggDb-RCtZfzpZG4_S0IPr-cPbHg"}, 
+                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.2QZCqB8Ed4_8EHBNggDb-RCtZfzpZG4_S0IPr-cPbHg",
+				"callback1": function(cmp1){alert(cmp1);}, 
                 "lightning",
                 function(cmp) {
                   console.log("LWC component was created");
