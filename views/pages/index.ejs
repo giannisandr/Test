@@ -10,25 +10,23 @@
 
 <div class="jumbotron text-center">
   <h1>Lightning Out</h1>
-  <script src="https://myeurolife--dev1.lightning.force.com/lightning/lightning.out.js"></script>
-  <script>
-       $Lightning.use("c:LoutTest", function() {
-         console.log("App embeded")
-           $Lightning.createComponent("c:EclaimsTest",
-                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.2QZCqB8Ed4_8EHBNggDb-RCtZfzpZG4_S0IPr-cPbHg",
-				"callback1": function(cmp1){alert(cmp1);}
-				}, 
-                "lightning",
-                function(cmp) {
-                  console.log("LWC component was created");
-                  // do some stuff
-                }				
-            ); 
-          },
-         "https://myeurolife--dev1.lightning.force.com",
-         "00D0E000000EC89!ARAAQB7q5.0_PiKMSnsy3B2UxKafx1nxy1b.Ev5r36MqpGIryagr4OMI2EZ9COpWIvw5_QnK1JiSpMDrcD3DV05ml4LhnjhO",
-        )		
-  </script>
+ <script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
+	<script>
+		   $Lightning.use("c:LightningOutDemo", function() {
+			 console.log("App embeded")
+			   $Lightning.createComponent("c:NewDatable",
+					{"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.2QZCqB8Ed4_8EHBNggDb-RCtZfzpZG4_S0IPr-cPbHg"}, 
+					"lightning",
+					function(cmp) {
+					  console.log("LWC component was created");
+					  // do some stuff
+					}
+				); 
+			  },
+			 "https://myeurolife--qa.lightning.force.com",
+			 "00D7Y000000BEE7!AR0AQCGBlwpu_JOdwaM9BVuO1kMHHEVLMrW.zG0634U1t78wpxIG.mvArCFZKYgJ6.Yws1quTnc7IXdpu8dECC9gb_xFyt6x",
+			);
+	  </script>
 </div>
 
 <div id="lightning"></div>
