@@ -13,10 +13,10 @@
 </div>
 	<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-       $Lightning.use("c:PaginationApp", function() {
+       $Lightning.use("c:ConnectOpenClaims", function() {
          console.log("App embeded")
-           $Lightning.createComponent("c:DataTableWithPagination",
-                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.YFGSEZNQQkrpEibJ-hi_2gYnCdYumfVqBYtxxvBLOIU"}, 
+           $Lightning.createComponent("c:OpenClaimsDataTable",
+                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJnb2xkZW5SZWNvcmRJZCI6IjExMjIzMyJ9.W70rZUtp0KqzQ8ILKo1sw6S3o0e7aCTIv-kjGigk5po"}, 
                 "lightning",
                 function(cmp) {
                   console.log("LWC component was created");
