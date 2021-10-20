@@ -13,7 +13,7 @@
 </div>
 	<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js" type="text/javascript"> </script>
 <script>
-       $Lightning.use("c:EclaimsApp", function() {
+       $Lightning.use(express.static("c:EclaimsApp"), function() {
          console.log("App embeded")
            $Lightning.createComponent("c:Eclaims",
                 {"token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6InJiaWJsdWF0In0.eyJpc3MiOiJDb25uZWN0IiwiZ29sZGVuUmVjb3JkSWQiOjEwMDE1MDQ5ODAsInBvbGljeU51bWJlciI6IjEwNTAwMDAwMDAiLCJpbnN1cmVkSWQiOiI4NDQyIiwiZGVwZW5kZW50TWVtYmVySWQiOiI4NDQyIiwiY2xhaW1JbnN1cmVkTmFtZSI6Is6azpHOms6RzpLOkSDOms6pzp3Oo86kzpHOnc6kzpnOnc6RIiwiY292ZXJhZ2VzIjoiNDAyMDAsNTAwMDIsNTAxMDIsNjAwMDIsNjAyMDEsNjAyMDEsNjAyMDEiLCJwZXJzb25hbENvbnRyYWN0cyI6IjEwMDA3ODU4OTYiLCJlbWFpbCI6InRlc3QxMDAxNTA0OTgwQGV1cm9saWZlLmdyIiwiY3VzdG9tZXJDb2RlIjoiMTE4Mzc5OCIsImp0aSI6Ijg3YmI4YTdmLTgwZDEtNDFhOC05NDk1LWRjNGMwYTVkNmNhNiIsImlhdCI6MTYzNDcyMjEzNywiZXhwIjoxNjM0NzIzMDM3fQ.SibYBD9cuKuAanvBUbSfot8Nn4AMYVdeRXqUGb-_8Fk"}, 
