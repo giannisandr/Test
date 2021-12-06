@@ -13,10 +13,10 @@
 </div>
 	<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-       $Lightning.use("c:LightningOutDemo", function() {
+       $Lightning.use("c:EclaimsApp", function() {
          console.log("App embeded")
-           $Lightning.createComponent("c:NewDatable",
-                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.YFGSEZNQQkrpEibJ-hi_2gYnCdYumfVqBYtxxvBLOIU"}, 
+           $Lightning.createComponent("c:Eclaims",
+                {"token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IndyaWRldWF0In0.eyJpc3MiOiJDb25uZWN0IiwiZ29sZGVuUmVjb3JkSWQiOjEwMDE1MDQ5ODAsInBvbGljeU51bWJlciI6IjEwNTAwMDAwMDAiLCJpbnN1cmVkSWQiOiI4NDQyIiwiZGVwZW5kZW50TWVtYmVySWQiOiI4NDQyIiwiY2xhaW1JbnN1cmVkTmFtZSI6Is6azpHOms6RzpLOkSDOms6pzp3Oo86kzpHOnc6kzpnOnc6RIiwiY292ZXJhZ2VzIjoiNDAyMDAsNTAwMDIsNTAxMDIsNjAwMDIsNjAyMDEsNjAyMDEsNjAyMDEiLCJwZXJzb25hbENvbnRyYWN0cyI6IjEwMDA3ODU4OTYiLCJlbWFpbCI6InRlc3QxMDAxNTA0OTgwQGV1cm9saWZlLmdyIiwiY3VzdG9tZXJDb2RlIjoiMTE4Mzc5OCIsImp0aSI6ImRhMTQ3M2Y5LWQzZDAtNGQwZi1iY2EyLWI4MWZjMDBjYWQ3NiIsImlhdCI6MTYzODgwNDAwNiwiZXhwIjoxNjM4ODA0OTA2fQ.k2RMYhrBz3bXWQpGqMqp4o4fUhoSo6fRw_tUQKfHhoE"}, 
                 "lightning",
                 function(cmp) {
                   console.log("LWC component was created");
@@ -25,7 +25,7 @@
             ); 
           },
          "https://myeurolife--qa.lightning.force.com",
-         "00D7Y000000BEE7!AR0AQMNs3a.yU5WhvTUPy5Vqlf4PlZwvnws0_OcC64gGkMfFI3IQCW8vRYAqTBJoyvfX9HfwJ.7j4lW1lragvHs0.LRY_ME9",
+         "00D7Y000000BEE7!AR0AQAUqgwjv_Vl3qgzdCxNloIwzEpZ2Shh1M_j0Nul4c8uORJ1fifCLVtt.Fn.DOTgzGolrqqH4EutwCXuPyqUsrFCIevBo",
         );
   </script>
 
