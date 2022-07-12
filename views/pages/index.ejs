@@ -7,16 +7,6 @@
 <body>
 
   <% include ../partials/nav.ejs %>
-<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
-
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -42,25 +32,25 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://myeurolife.my.salesforce.com',
-			'https://eurolife.force.com/EurolifeFFH',
+			'https://myeurolife--qa.my.salesforce.com',
+			'https://qa-eurolife.cs173.force.com/EurolifeFFH',
 			gslbBaseURL,
-			'00D1t000000Ddo6',
-			'Eurolife_Connect',
+			'00D7Y000000BEE7',
+			'Eurolife_Connet',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c2-cdg.salesforceliveagent.com/content',
-				deploymentId: '5727T0000000013',
-				buttonId: '5737T000000000t',
-				baseLiveAgentURL: 'https://d.la2-c2-cdg.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7T000000fxSQUAY_180dbee9bdb',
-				isOfflineSupportEnabled: false
+				baseLiveAgentContentURL: 'https://c.la3-c1cs-fra.salesforceliveagent.com/content',
+				deploymentId: '5727Y000000Kyll',
+				buttonId: '5737Y000000CeIy',
+				baseLiveAgentURL: 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7Y000000Gmf4UAC_17f97ebf07d',
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://myeurolife.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://myeurolife--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
