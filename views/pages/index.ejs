@@ -8,12 +8,14 @@
 
   <% include ../partials/nav.ejs %>
 
+Eclaims QA:
 <div class="jumbotron text-center">
   <h1>Lightning Out</h1>
 </div>
 	<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-       $Lightning.use("c:EclaimsApp", function() {
+       $Lightning.use("c:EclaimsApp", 
+		function() {
          console.log("App embeded")
            $Lightning.createComponent("c:Eclaims",
                 {"token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImVuYXJidWF0In0.eyJpc3MiOiJDb25uZWN0IiwiZ29sZGVuUmVjb3JkSWQiOjEwMDA0ODAzNTQsInBvbGljeU51bWJlciI6IjEwNjIwMDAwMDAiLCJpbnN1cmVkSWQiOiIyNjU1NCIsImRlcGVuZGVudE1lbWJlcklkIjoiMjY3ODAiLCJjbGFpbUluc3VyZWROYW1lIjoizp7Olc6dzpHOms6XzqMgzpLOoc6RzqPOmc6UzpHOoyIsImNvdmVyYWdlcyI6IjQwMjAwLDUwMDAyLDUwMTAyLDYwMDAyLDYwMjAxLDYwMjAxLDYwMjAxLDYwMjAxLDYwNTA1IiwianRpIjoiNWRiOTcyNzgtNzMzZi00YmJiLThjNjItMjMyMWQyZDdjODcxIiwiaWF0IjoxNjMxNTE4ODUxLCJleHAiOjE2MzE1MTk3NTF9.gPLrUMLlDOXcVEOmIc8t4YDeclPAvGdjYdUfaB89SEU"}, 
@@ -25,11 +27,12 @@
             ); 
           },
          "https://myeurolife--qa.lightning.force.com",
-         "00D7Y000000BEE7!AR0AQH7DfNj8JfHM83XdsV1qgSc6uETSS0_tsUqDQznt.nrilzZazmn8y6q4IHpf432X7xK0UdefJ.9tjpiXmsf0flmhBfX2",
+         "00D7Y000000BEE7!AR0AQH9_s1fTgCyR_DK3NrFugVEPAmHcMfgh7UKggDMFnEuKv0LcZDj_c40RdooAPIavy7O05MjZ3kQWVXdat.IcU5htXoPz",
         );
   </script>
 
 <div id="lightning"></div>
+
 <!--
 <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
 <script type='text/javascript'>
