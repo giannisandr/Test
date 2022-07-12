@@ -7,29 +7,68 @@
 <body>
 
   <% include ../partials/nav.ejs %>
-<div class="jumbotron text-center">
-  <h1>Lightning Out</h1>
-</div>
-	<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
-<script>
-       $Lightning.use("c:EclaimsApp", 
-		function() {
-         console.log("App embeded")
-           $Lightning.createComponent("c:Eclaims",
-                {"token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImVuYXJidWF0In0.eyJpc3MiOiJDb25uZWN0IiwiZ29sZGVuUmVjb3JkSWQiOjEwMDI1NTMxNjMsInBvbGljeU51bWJlciI6IjE0NzkwMDAwMDAiLCJpbnN1cmVkSWQiOiI1OTM2NyIsImRlcGVuZGVudE1lbWJlcklkIjoiNTkzNjciLCJjbGFpbUluc3VyZWROYW1lIjoizpzOn86lzqHOms6fzpPOmc6Rzp3Onc6XzqMgzp3Omc6azp_Om86Rzp_OoyIsImNvdmVyYWdlcyI6IjQwMzA0LDYwMjAxLDYwMjAxLDYwMjAxLDYwMjAxIiwicGVyc29uYWxDb250cmFjdHMiOiIiLCJlbWFpbCI6InRlc3QxMDAyNTUzMTYzQGV1cm9saWZlLmdyIiwiY3VzdG9tZXJDb2RlIjoiMTEzNTIyNiIsImp0aSI6Ijg4NGIxNWE4LTM0ZTEtNDk1Mi05N2FkLTdkNzg4YzkyNGVlNCIsImlhdCI6MTY1NzYxOTY1NCwiZXhwIjoxNjU3NjIwNTU0fQ.8QvGU8HtL_C7DBIH4NaUwSEv8IdLB1avwRTwBcLT-pE"}, 
-                "lightning",
-                function(cmp) {
-                  console.log("LWC component was created");
-                  // do some stuff
-                }
-            ); 
-          },
-         "https://myeurolife--qa.lightning.force.com",
-         "00D7Y000000BEE7!AR0AQH9_s1fTgCyR_DK3NrFugVEPAmHcMfgh7UKggDMFnEuKv0LcZDj_c40RdooAPIavy7O05MjZ3kQWVXdat.IcU5htXoPz",
-        );
-  </script>
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
 
-<div id="lightning"></div>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://myeurolife.my.salesforce.com',
+			'https://eurolife.force.com/EurolifeFFH',
+			gslbBaseURL,
+			'00D1t000000Ddo6',
+			'Eurolife_Connect',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c2-cdg.salesforceliveagent.com/content',
+				deploymentId: '5727T0000000013',
+				buttonId: '5737T000000000t',
+				baseLiveAgentURL: 'https://d.la2-c2-cdg.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7T000000fxSQUAY_180dbee9bdb',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://myeurolife.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
 
 <!--
 <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
