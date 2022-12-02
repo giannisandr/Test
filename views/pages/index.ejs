@@ -9,12 +9,13 @@
  <div class="jumbotron text-center">
   <h1>Lightning Out</h1>
 </div>
-<script src="https://myeurolife--qa.lightning.force.com/lightning/lightning.out.js"></script>
+	<script src="https://myeurolife--qa.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
-       $Lightning.use("c:LightningOutDemo", function() {
+       $Lightning.use("c:EclaimsApp", 
+		function() {
          console.log("App embeded")
-           $Lightning.createComponent("c:NewDatable",
-                {"token" : "eyJraWQiOiJrZXk0IiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJpc3MiOiJFdWNhbHlwdHVzIiwiZXhwIjoxNjE3MTg3NzY4LCJ1aWQiOiIxIiwiYmNkIjoiMiJ9.YFGSEZNQQkrpEibJ-hi_2gYnCdYumfVqBYtxxvBLOIU"}, 
+           $Lightning.createComponent("c:Eclaims",
+                {"token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImVuYXJidWF0In0.eyJpc3MiOiJDb25uZWN0IiwiZ29sZGVuUmVjb3JkSWQiOjEwMDI1NTMxNjMsInBvbGljeU51bWJlciI6IjE0NzkwMDAwMDAiLCJpbnN1cmVkSWQiOiI1OTM2NyIsImRlcGVuZGVudE1lbWJlcklkIjoiNTkzNjciLCJjbGFpbUluc3VyZWROYW1lIjoizpzOn86lzqHOms6fzpPOmc6Rzp3Onc6XzqMgzp3Omc6azp_Om86Rzp_OoyIsImNvdmVyYWdlcyI6IjQwMzA0LDYwMjAxLDYwMjAxLDYwMjAxLDYwMjAxIiwicGVyc29uYWxDb250cmFjdHMiOiIiLCJlbWFpbCI6InRlc3QxMDAyNTUzMTYzQGV1cm9saWZlLmdyIiwiY3VzdG9tZXJDb2RlIjoiMTEzNTIyNiIsImp0aSI6Ijg4NGIxNWE4LTM0ZTEtNDk1Mi05N2FkLTdkNzg4YzkyNGVlNCIsImlhdCI6MTY1NzYxOTY1NCwiZXhwIjoxNjU3NjIwNTU0fQ.8QvGU8HtL_C7DBIH4NaUwSEv8IdLB1avwRTwBcLT-pE"}, 
                 "lightning",
                 function(cmp) {
                   console.log("LWC component was created");
@@ -22,11 +23,12 @@
                 }
             ); 
           },
-         "https://myeurolife--qa.lightning.force.com",
-         "00D7Y000000BEE7!AR0AQDqoNg21daL.J5J9GN6yvHGhIEHorLYKa49Hfdr.TZXTpNf4g7byCNIQkLUBq8GbbsQAzsalBRD8OsIcVpWAF7BV.O.N",
+         "https://myeurolife--qa.sandbox.lightning.force.com",
+         "00D7Y000000BEE7!AR0AQNlSmfRAkI86g_ns.Txq9tFjb1w8wWxp6w1QOtbpdZvWRRmwqRld084CwSo6PnizbmbFyMuORx9zNKIlsu3teTIXZ40U",
         );
   </script>
-<div id="lightning"></div> 
+
+<div id="lightning"></div>
 
 
 
